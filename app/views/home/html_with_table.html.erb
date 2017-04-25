@@ -1,0 +1,22 @@
+<%unless params[:format] == "pdf"%>
+<%=link_to 'home', root_path%>
+<%=link_to 'Create PDF document', to_pdf_table_path(:format => "pdf")%>
+<%end%>
+
+<div class="clear">&nbsp;</div>
+<table>
+  <thead>
+    <tr>
+     <th> sr no </th>
+      <th> Number </th>
+      </tr>
+  </thead>
+  <tbody>
+    <% 6.times do |d| %>
+      <tr>
+        <td> <%= "#{d}"%></td>
+        <td> <%= "#{d}".to_i + 5 %></td>
+        </tr>
+       <%end%>
+   <tbody>
+ </table>
